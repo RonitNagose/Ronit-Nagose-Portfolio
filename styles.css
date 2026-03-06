@@ -1,0 +1,251 @@
+:root{
+  --bg:#0b0b0b;
+  --panel:#0f0f10;
+  --muted:#9a9a9a;
+  --accent:#7a2cff;
+  --card:#121212;
+  --glass: rgba(255,255,255,0.02);
+}
+
+html,body{
+    height: 100%;
+    margin: 0;
+}
+*{box-sizing:border-box}
+body{
+  font-family:'Poppins',system-ui,Arial;
+  margin:0;
+  background:var(--bg);
+  color:#e8e8e8;
+}
+.topbar{
+  height:64px;
+  border-bottom:1px solid rgba(255,255,255,0.03);
+  /* background:linear-gradient(180deg, rgba(255,255,255,0.03)); */
+  background-color: #0b0b0b;
+}
+.brand .logo{font-weight:700;color:#fff;margin-right:6px}
+.top-controls .dot{width:12px;height:12px;border-radius:50%;background:#2ecc71}
+.top-controls .clock{opacity:0.9;font-size:13px}
+.sidebar{
+  background:linear-gradient(90deg, rgba(255,255,255,0.01), transparent);
+  border-right:1px solid rgba(255,255,255,0.03);
+  min-height:calc(100vh - 64px);
+  padding:30px 20px;
+}
+.sections-title{color:#fff;font-weight:700;margin-bottom:20px}
+.nav-link{color:var(--muted);padding:8px 10px;border-radius:8px}
+.nav-link.active{background:rgba(255,255,255,0.03);color:#fff}
+.content{min-height:calc(100vh - 64px);}
+.display-1{font-size:48px;font-weight:600;margin:8px 0}
+.large{font-size:36px;font-weight:600;margin-bottom:6px}
+.subtitle{font-size:10px;color:#9a9a9a;margin-bottom:18px;font-weight: 100px;}
+.lead{color:#cfcfcf;max-width:80%;font-weight:300}
+.btn-primary{background:linear-gradient(90deg,var(--accent),#b35dff);border:none}
+.btn-purple{background:linear-gradient(90deg,var(--accent),#b35dff);border:none;color:#fff}
+.project-card{background:var(--card);border-radius:12px;color:#dedede}
+.muted{color:var(--muted)}
+.badge{background:rgba(255,255,255,0.05);color:#fff;padding:10px 16px;border-radius:12px;display:inline-flex;align-items:center;gap:6px;transition:transform .2s}
++.badge:hover{transform:scale(1.05)}
++.skill-icon{width:24px;height:24px;filter:invert(1);}+.skill-grid{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px}
++.skill-card{background:var(--card);padding:10px 14px;border-radius:10px;display:flex;align-items:center;gap:8px;transition:transform .2s}
++.skill-card:hover{transform:scale(1.05)}.timeline{border-left:2px solid rgba(255,255,255,0.03);padding-left:24px}
+.timeline-item{display:flex;gap:16px;margin-bottom:22px}
+.timeline-item .dot{width:36px;height:36px;border-radius:50%;background:#1f2b4d;flex:0 0 36px}
+.timeline-body h5{margin:0;font-weight:600}
++.project-card h5{font-weight:600}
+.contact-form .form-control{background:transparent;border:1px solid rgba(255,255,255,0.06);color:#fff}
+.contact-form .form-label{color:#ddd}
+
+/* Mobile drawer */
+.mobile-drawer{position:fixed;left:0;right:0;bottom:-100%;height:70vh;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);backdrop-filter:blur(6px);border-top-left-radius:12px;border-top-right-radius:12px;box-shadow:0 -10px 40px rgba(0,0,0,0.6);transition:transform .32s ease, bottom .32s ease;transform:translateY(100%);z-index:1050}
+.mobile-drawer.open{transform:translateY(0);bottom:0}
+.drawer-handle{height:6px;width:80px;background:rgba(255,255,255,0.06);border-radius:6px;margin:8px auto}
+.drawer-content .logo{font-weight:700}
+.list-group-item-dark{background:transparent;border:1px solid rgba(255,255,255,0.03);color:#ddd;margin-bottom:8px;border-radius:10px}
+
+/* small helpers */
+.btn-ghost{background:transparent;border:none;color:#ddd}
+.btn-outline-light{border-color:rgba(255,255,255,0.06);color:#ddd}
+.muted{color:var(--muted)}
+
+.subtitle {
+    color: oklch(0.705 0.015 286.067);
+    font-size: 40px;
+    font-weight: 40px;
+}
+
+.display-1 {
+    font-size: 40px;
+
+}
+
+@media (max-width:767px){
+  .sidebar{display:none}
+  .display-1{font-size:25px}
+  .subtitle{font-size:25px}
+  .lead{max-width:100%}
+}
+
+.subtitle{
+    font-weight:600;
+    word-spacing: -2px;
+}
+
+
+.github:hover{
+color: #7a2cff;
+} 
+
+#musicBtn {
+    cursor: pointer;
+    color: white;
+    /* default color */
+    transition: 0.3s ease;
+}
+
+
+.nav-link:hover{
+    background-color: rgba(255,255,255,0.03);
+    color: #ffffff;
+}
+
+.sidebar .nav-link.active {
+    background-color: #2a2a2a !important;
+    color: #ffffff !important;
+    border-radius: 8px;
+}
+
+/* Playing state */
+#musicBtn.active {
+    color: #a855f7;
+}
+
+/* Completely kill bootstrap focus styles */
+/* #musicBtn:focus,
+#musicBtn:active,
+#musicBtn:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+    background: none !important;
+} */
+
+/* Also prevent child icon from inheriting purple */
+/* #musicBtn i {
+    pointer-events: none;
+} */
+
+.topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    /* keeps it above content */
+}
+
+.app {
+    margin-top:20px;
+    /* adjust according to your header height */
+}
+
+#intro{
+    padding-top: 30px;
+    color: #fff;
+}
+
+.content{
+    display: block !important;
+}
+
+.resume-btn{
+    
+    color: #fff;
+}
+
+.resume-btn:hover{
+    color: black;
+    background-color: white;
+}
+
+@media (min-width: 768px) {
+
+    .sidebar {
+        position: fixed !important;
+        top: 60px;
+        /* adjust if header height different */
+        left: 0;
+        width: 240px !important;
+        /* same as col-md-2 */
+        height: calc(100vh - 60px);
+        overflow-y: auto;
+    }
+
+    .content {
+        margin-left: 240px !important;
+        width: calc(100% - 240px) !important;
+    }
+
+}
+
+.section{
+    margin-top: 40px;
+}
+
+.sideBtns{
+    margin-top: 500px;
+}
+
+#musicBtn:not(.active):hover {
+    color: #7a2cff;
+}
+
+.footer-text{
+    color: oklch(0.705 0.015 286.067);
+}
+
+.badge{
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;
+    padding-right: 15px;
+    background-color: #0b0b0b;
+}
+
+skills-badges{
+    display: flex;
+    gap: 20px;
+}
+
+.timeline-body{
+    margin-top: 10px;
+}
+
+#mobileDrawer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    max-height: 65vh;
+    /* only 65% of screen */
+    transform: translateY(100%);
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    border-radius: 20px 20px 0 0;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+#mobileDrawer.open {
+    transform: translateY(0);
+}
+
+.sidebar .nav-link.active {
+    background-color: #2a2a2a !important;
+    color: #ffffff !important;
+    border-radius: 8px;
+}
+
+#musicBtn:not(.active) {
+    color: white !important;
+}

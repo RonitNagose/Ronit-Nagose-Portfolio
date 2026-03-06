@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ronit Nagose • Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar d-flex align-items-center justify-content-between px-4">
+      <div class="brand d-flex align-items-center">
+        <button id="hamburger" class="btn btn-ghost me-2 d-md-none">☰</button>
+        <nav class="ms-3 d-none d-md-flex gap-2">
+          <a class="logo nav-link" href="#" onclick="loadPage('intro.html')" style="text-decoration: none;">RN</a>
+          <a href="#" onclick="loadPage('intro.html')" class="nav-link" style="text-decoration: none;">Home</a>
+          <a href="https://www.linkedin.com/in/ronit-nagose-78911a343/" class="nav-link"  style="text-decoration: none;">LinkedIn <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          <a href="#" onclick="loadPage('about.html')" class="nav-link"  style="text-decoration: none;">Resume <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </nav>
+      </div>
+      <div class="top-controls d-flex align-items-center gap-4">
+        <div id="musicBtn"><i class="fa-solid fa-music"></i></div>
+        <audio id="bgMusic" src="assets/music/music.mp3" loop></audio>
+        <div class="search d-none d-md-block">
+          <input class="form-control form-control-sm" placeholder="Under Construction.." />
+        </div>
+        <div class="icons d-flex gap-2 align-items-center">
+          <div class="dot online"></div>
+          <div class="clock">22:36:00</div>
+          <!-- <button id="themeToggle" class="btn btn-ghost">☼</button> -->
+          &nbsp;
+          
+          <a class="github" style="color: #ffffff;" href="https://leetcode.com/u/Ronit_Nagose18/"><i class="fa-solid fa-code github"></i></a>
+          &nbsp;&nbsp;
+          <a class="github" style="color: #ffffff;" href="https://github.com/RonitNagose"><i class="fa-brands fa-github github"></i></a>
+        </div>
+      </div>
+    </header>
+
+    <div class="app container-fluid">
+      <div class="row gx-0">
+        <aside class="col-md-2 sidebar d-none d-md-block">
+          <h5 class="sections-title">Sections</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="#" onclick="loadPage('intro.html',this)">Introduction</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" onclick="loadPage('about.html',this)">About Me</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" onclick="loadPage('projects.html',this)">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" onclick="loadPage('skills.html',this)">Skills & Tools</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" onclick="loadPage('experience.html',this)">Experience</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" onclick="loadPage('education.html',this)">Certifications</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" onclick="loadPage('contact.html',this)">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" onclick="loadPage('stats.html',this)">Stats</a></li>
+          </ul>
+        </aside>
+
+        <main class="content px-2 py-5">
+
+
+
+        <div id="content">
+            <!-- Content will load here -->
+        </div>
+
+        <footer style=" text-align: center; margin-left: 10px; margin-right: 10px; margin-bottom: 2px;">
+          <p class="footer-text">Developed by - Ronit Nagose</p>
+          <p class="footer-text"><i class="fa-solid fa-copyright"></i>2026</p>
+          <p class="footer-text" style="font-size: 15px;">(Warning: Entering this website may cause sudden interest in hiring
+            me.😅)</p>
+        </footer>
+        </main>
+      </div>
+    </div>
+
+    <!-- Mobile bottom nav drawer -->
+    <div id="mobileDrawer" class="mobile-drawer">
+      <div class="drawer-handle"></div>
+      <div class="drawer-content p-3">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+          <div class="d-flex align-items-center gap-5">
+            <div class="logo" style="text-align: center;">RN</div>
+            <div class="dot online"></div>
+            <!-- <div class="clock">10:39 pm</div> -->
+          </div>
+          <button id="closeDrawer" class="btn btn-ghost">✕</button>
+        </div>
+        <div class="list-group">
+          <!-- <a class="list-group-item list-group-item-dark" href="#" onclick="loadPage('about.html')">Home</a> -->
+          <div class="list-group-item list-group-item-dark text-uppercase muted" style="text-align: center;">Sections</div>
+          <a class="list-group-item list-group-item-dark" href="#" onclick="loadPage('intro.html')">Introduction</a>
+          <a class="list-group-item list-group-item-dark" href="#" onclick="loadPage('about.html')">About Me</a>
+          <a class="list-group-item list-group-item-dark" href="#" onclick="loadPage('projects.html')">Projects</a>
+          <a class="list-group-item list-group-item-dark" href="#" onclick="loadPage('skills.html')">Skills & Tools</a>
+          <a class="list-group-item list-group-item-dark" href="#" onclick="loadPage('experience.html')">Experience</a>
+          <a class="list-group-item list-group-item-dark" href="#" onclick="loadPage('education.html')">Certifications</a>
+          <a class="list-group-item list-group-item-dark" href="#" onclick="loadPage('contact.html')">Contact</a>
+          <a class="list-group-item list-group-item-dark" href="#" onclick="loadPage('stats.html')">Stats</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
