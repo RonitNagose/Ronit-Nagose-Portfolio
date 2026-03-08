@@ -26,7 +26,7 @@ I am a B.Tech student focused on mastering **Data Structures & Algorithms** and 
 - Organized project showcase  
 
 ## 🌐 Live Portfolio
-[(Add your deployed link here)](https://ronitnagose.github.io/Ronit-Nagose-Portfolio/#)
+[(Link)](https://ronitnagose.github.io/Ronit-Nagose-Portfolio/#)
 
 ## 📬 Contact
 **LinkedIn: https://www.linkedin.com/in/ronit-nagose-78911a343/
